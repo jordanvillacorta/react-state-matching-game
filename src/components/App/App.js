@@ -17,6 +17,8 @@ class App extends Component {
       tiles: [],
       toBeCleared: null
     };
+
+    this.startGame = this.startGame.bind(this);
   }
 
   startGame = ( numTiles ) => {
@@ -37,6 +39,7 @@ class App extends Component {
         <OptionsPanel
           playing={this.state.playing}
           numTiles={this.state.numTiles}
+          startGame={this.startGame}
         />
         <Board
           numTiles={this.state.numTiles}
