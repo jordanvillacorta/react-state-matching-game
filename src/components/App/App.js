@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
-import OptionsPanel from '../OptionsPanel'
-import Board from '../Board'
+import OptionsPanel from '../OptionsPanel';
+import Board from '../Board';
+import { createTiles } from '../../misc/utils';
+
+
 
 import './App.css';
 
@@ -14,6 +17,15 @@ class App extends Component {
       tiles: [],
       toBeCleared: null
     };
+  }
+
+  startGame = ( numTiles ) => {
+    this.setState((state) => ({
+      playing: true,
+      previousTileIndex: null,
+      toBeCleared: null,
+      tiles: createTiles(state.numTiles)
+    }));
   }
 
   render() {
@@ -30,7 +42,6 @@ class App extends Component {
           numTiles={this.state.numTiles}
           tiles={this.state.tiles}
         />
-      {/* } */}
     </div>
   );
 
