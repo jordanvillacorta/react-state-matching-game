@@ -1,7 +1,7 @@
-import React from 'react'
-import './TileSelector.css'
+import React from 'react';
+import './TileSelector.css';
 
-const TileSelector = () => {
+const TileSelector = (props) => {
 
 
   const dropdown = (
@@ -16,10 +16,11 @@ const TileSelector = () => {
    <div className='tileSelector'>
      <div>Number of Tiles</div>
      <div className='tileSelectorDropdown'>
-       {dropdown}
+      {props.numTiles}
+      {dropdown}
      </div>
    </div>
- )
+ );
 }
 
-export default TileSelector
+export default TileSelector;
