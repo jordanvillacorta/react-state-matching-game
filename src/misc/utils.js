@@ -8,7 +8,7 @@ const indexOfSelected = (tiles, id, color) => {
     if (tile.id === id && tile.color === color) {
       tileIndex = index
     }
-  }) 
+  })
 
   return tileIndex
 }
@@ -59,4 +59,4 @@ const randomizeTiles = (tileArray) => {
   return tileArray
 }
 
-export { createTiles, indexOfSelected }
+export { createTiles, indexOfSelected };
